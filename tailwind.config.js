@@ -17,7 +17,8 @@ tailwind.config = {
             checkInText: '#0C6C17',
             checkout: "#EDE4B7",
             checkOutText: "#8C7710",
-            db: "#212D2B"
+            db: "#212D2B",
+            logout: "#344054"
           },
           padding: {
             "1%": '1%',
@@ -36,9 +37,6 @@ tailwind.config = {
             },
           fontFamily: {
             primary: ['Inter'],
-            headerWeight: "500",
-            normalWeight: "400",
-            biggerWeight: "700",
           },
           fontSize:{
             big : "20px",
