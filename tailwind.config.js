@@ -18,7 +18,9 @@ tailwind.config = {
             checkout: "#EDE4B7",
             checkOutText: "#8C7710",
             db: "#212D2B",
-            logout: "#344054"
+            logout: "#344054",
+            foundation: "#0C6C17",
+            inactive: "#8C1810"
           },
           padding: {
             "1%": '1%',
@@ -53,36 +55,3 @@ tailwind.config = {
         }
       }
     } 
-// module.exports = {
-//     theme: {
-//       screens: {
-//         sm: '480px',
-//         md: '768px',
-//         lg: '976px',
-//         xl: '1440px',
-//       },
-//       colors: {
-//         'blue': '#1fb6ff',
-//         'pink': '#ff49db',
-//         'orange': '#ff7849',
-//         'green': '#13ce66',
-//         'gray-dark': '#273444',
-//         'gray': '#8492a6',
-//         'gray-light': '#d3dce6',
-//         clifford: '#3DC9B7',
-//       },
-//       fontFamily: {
-//         sans: ['Graphik', 'sans-serif'],
-//         serif: ['Merriweather', 'serif'],
-//       },
-//       extend: {
-//         spacing: {
-//           '128': '32rem',
-//           '144': '36rem',
-//         },
-//         borderRadius: {
-//           '4xl': '2rem',
-//         }
-//       }
-//     }
-//   }
