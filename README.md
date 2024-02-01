@@ -8,3 +8,4 @@
 ## /pages/tagsmanagement.html
 ## /pages/usermanagement.html
 ## /index.html
+## /pages/scantransaction.html
