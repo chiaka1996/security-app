@@ -6,7 +6,7 @@ tailwind.config = {
             background_color: "#162220",
             basic: "#E7E8E7",
             natural: "#FEFFFE",
-            placeholder_color: "#B4B5B4",
+            placeholder_color: "#8C8C8C",
             logo: "#C3EEE9",
             site: "#6C0CE9",
             tags: "#108C1E",

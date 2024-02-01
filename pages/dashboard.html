@@ -212,89 +212,128 @@
                 <!-- table 2 section -->
                 <section class="pt-basic_padding">
                     <div class="font-big text-big text-natural mb-2%">Recent Attendance Report</div>
-                    <table class="table-auto w-[100%] border border-table border-collapse bg-background_color rounded-lg">
-                        <thead>
-                          <tr class="border border-table border-collapse">
-                            <th class="text-left text-small text-natural font-big  p-small">Security guard name</th>
-                            <th class="text-left text-small text-natural font-big  p-small">Time/Date</th>
-                            <th class="text-left text-small text-natural font-big  p-small">Action Type</th>
-                            <th class="text-left text-small text-natural font-big p-small">Tags</th>
-                            <th class="text-left text-small text-natural font-big p-small">Site</th>
-                            <th class="text-left text-small text-natural font-big p-small">Distance</th>
-                            <th class="text-left text-small text-natural font-big p-small">Image</th>
-                            <th class="text-left text-small text-natural font-big p-small">Proximity</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr class="border border-table border-collapse text-natural">
-                            <td class="text-normal font-normal px-small">Olatunji Afeez</td>
-                            <td class="text-normal font-normal px-small">
-                                <div>3/10/2023</div>
-                                <div>5:00pm</div>
-                            </td>
-                            <td class="text-normal font-normal px-small">
-                                <button class="bg-checkin W-[78px] h-[22px] p-5% rounded-full flex flex-row items-center justify-between">
-                                    <img src="../assets/images/green_dot.png" alt="dashboard" class="mr-2"/>
-                                    <span class="text-checkInText font-big text-small">Check in</span>
-                                </button>
-                            </td>
-                            <td class="text-normal font-normal px-small">Tag name</td>
-                            <td class="text-normal font-normal px-small">Site name</td>
-                            <td class="text-normal font-normal px-small">1</td>
-                            <td class="text-normal font-normal px-small">
-                            <img src="../assets/images/tableImg.png" alt="dashboard" class=" w-[60px] h-[60px]"/>
-                            </td>
-                            <td class="text-normal font-normal p-small">Very close</td>
-                          </tr>
-
-                          <tr class="border border-table border-collapse text-natural">
-                            <td class="text-normal font-normal  px-small py-smallest">Olatunji Afeez</td>
-                            <td class="text-normal font-normal  px-small py-smallest">
-                                <div>3/10/2023</div>
-                                <div>5:00pm</div>
-                            </td>
-                            <td class="text-normal font-normal px-small">
-                                <button class="bg-checkout W-[78px] h-[22px] p-5% rounded-full flex flex-row items-center justify-between">
-                                    <img src="../assets/images/red_dot.png" alt="dashboard" class="mr-2"/>
-                                    <span class="text-checkInText font-big text-small">Check out</span>
-                                </button>
-                            </td>
-                            <td class="text-normal font-normal  px-small py-smallest">Tag name</td>
-                            <td class="text-normal font-normal  px-small py-smallest">Site name</td>
-                            <td class="text-normal font-normal  px-small py-smallest">1</td>
-                            <td class="text-normal font-normal px-small  py-smallest">
-                            <img src="../assets/images/tableImg.png" alt="dashboard" class=" w-[60px] h-[60px]"/>
-                            </td>
-                            <td class="text-normal font-normal px-small py-smallest">Very close</td>
-                          </tr>
-
-                          <tr class="border border-table border-collapse text-natural">
-                            <td class="text-normal font-normal  px-small py-smallest">Olatunji Afeez</td>
-                            <td class="text-normal font-normal  px-small py-smallest">
-                                <div>3/10/2023</div>
-                                <div>5:00pm</div>
-                            </td>
-                            <td class="text-normal font-normal px-small">
-                                <button class="bg-checkout W-[78px] h-[22px] p-5% rounded-full flex flex-row items-center justify-between">
-                                    <img src="../assets/images/red_dot.png" alt="dashboard" class="mr-2"/>
-                                    <span class="text-checkInText font-big text-small">Check out</span>
-                                </button>
-                            </td>
-                            <td class="text-normal font-normal  px-small py-smallest">Tag name</td>
-                            <td class="text-normal font-normal  px-small py-smallest">Site name</td>
-                            <td class="text-normal font-normal  px-small py-smallest">1</td>
-                            <td class="text-normal font-normal px-small  py-smallest">
-                            <img src="../assets/images/tableImg.png" alt="dashboard" class=" w-[60px] h-[60px]"/>
-                            </td>
-                            <td class="text-normal font-normal px-small py-smallest">Very close</td>
-                          </tr>
-                          
-
-                          
-
-                        
-                        </tbody>
-                      </table>
+                    <section class="border border-table py-1 mt-[2%] rounded-lg">
+                      <table class="table-auto w-[100%] bg-background_color">
+                          <thead>
+                            <tr class="">
+                              <th class="text-left text-small text-natural font-big  px-small py-smaller">Security guard name</th>
+                              <th class="text-left text-small text-natural font-big  px-small py-smaller">Time/Date</th>
+                              <th class="text-left text-small text-natural font-big  px-small py-smaller">Action Type</th>
+                              <th class="text-left text-small text-natural font-big px-small py-smaller">Tags</th>
+                              <th class="text-left text-small text-natural font-big px-small py-smaller">Site</th>
+                              <th class="text-left text-small text-natural font-big px-small py-smaller">Distance</th>
+                              <th class="text-left text-small text-natural font-big px-small py-smaller">Image</th>
+                              <th class="text-left text-small text-natural font-big px-small py-smaller">Proximity</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="border border-table border-x-0 text-natural">
+                              <td class="text-normal font-normal px-small">Olatunji Afeez</td>
+                              <td class="text-normal font-normal px-small">
+                                  <div>3/10/2023</div>
+                                  <div>5:00pm</div>
+                              </td>
+                              <td class="text-normal font-normal px-small">
+                                  <button class="bg-checkin W-[78px] h-[22px] p-5% rounded-full flex flex-row items-center justify-between">
+                                      <img src="../assets/images/green_dot.png" alt="dashboard" class="mr-2"/>
+                                      <span class="text-checkInText font-big text-small">Check in</span>
+                                  </button>
+                              </td>
+                              <td class="text-normal font-normal px-small">Tag name</td>
+                              <td class="text-normal font-normal px-small">Site name</td>
+                              <td class="text-normal font-normal px-small">1</td>
+                              <td class="text-normal font-normal px-small">
+                              <img src="../assets/images/tableImg.png" alt="dashboard" class=" w-[60px] h-[60px]"/>
+                              </td>
+                              <td class="text-normal font-normal p-small">Very close</td>
+                            </tr>
+  
+                            <tr class="border border-table border-x-0 text-natural">
+                              <td class="text-normal font-normal  px-small py-smallest">Olatunji Afeez</td>
+                              <td class="text-normal font-normal  px-small py-smallest">
+                                  <div>3/10/2023</div>
+                                  <div>5:00pm</div>
+                              </td>
+                              <td class="text-normal font-normal px-small">
+                                  <button class="bg-checkout W-[78px] h-[22px] p-5% rounded-full flex flex-row items-center justify-between">
+                                      <img src="../assets/images/red_dot.png" alt="dashboard" class="mr-2"/>
+                                      <span class="text-checkInText font-big text-small">Check out</span>
+                                  </button>
+                              </td>
+                              <td class="text-normal font-normal  px-small py-smallest">Tag name</td>
+                              <td class="text-normal font-normal  px-small py-smallest">Site name</td>
+                              <td class="text-normal font-normal  px-small py-smallest">1</td>
+                              <td class="text-normal font-normal px-small  py-smallest">
+                              <img src="../assets/images/tableImg.png" alt="dashboard" class=" w-[60px] h-[60px]"/>
+                              </td>
+                              <td class="text-normal font-normal px-small py-smallest">Very close</td>
+                            </tr>
+  
+                            <tr class="border border-table border-x-0 text-natural">
+                              <td class="text-normal font-normal  px-small py-smallest">Olatunji Afeez</td>
+                              <td class="text-normal font-normal  px-small py-smallest">
+                                  <div>3/10/2023</div>
+                                  <div>5:00pm</div>
+                              </td>
+                              <td class="text-normal font-normal px-small">
+                                  <button class="bg-checkout W-[78px] h-[22px] p-5% rounded-full flex flex-row items-center justify-between">
+                                      <img src="../assets/images/red_dot.png" alt="dashboard" class="mr-2"/>
+                                      <span class="text-checkInText font-big text-small">Check out</span>
+                                  </button>
+                              </td>
+                              <td class="text-normal font-normal  px-small py-smallest">Tag name</td>
+                              <td class="text-normal font-normal  px-small py-smallest">Site name</td>
+                              <td class="text-normal font-normal  px-small py-smallest">1</td>
+                              <td class="text-normal font-normal px-small  py-smallest">
+                              <img src="../assets/images/tableImg.png" alt="dashboard" class=" w-[60px] h-[60px]"/>
+                              </td>
+                              <td class="text-normal font-normal px-small py-smallest">Very close</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="text-basic flex flex-row justify-between p-[2%] items-center">
+                          <div class="text-normal font-big">Shows<div class="inline border border-basic rounded p-1">50</div>result</div>
+                          <div>
+                             <div aria-label="Page navigation example">
+                                 <ul class="inline-flex -space-x-px text-normal font-big h-10 bg-db">
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight rounded-s-lg text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">
+                                         <img src="../assets/images/arrow-left.png" alt="arrow-left" class="mr-2 w-[20px] h-[20px]"/>
+                                         <span>Previous</span>
+                                     </a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">1</a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">2</a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">3</a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">...</a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">8</a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">9</a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">10</a>
+                                   </li>
+                                   <li>
+                                     <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight rounded-e-lg text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">
+                                     <span>Next</span>
+                                     <img src="../assets/images/arrow-right.png" alt="arrow-right" class="ml-2"/>
+                                     </a>
+                                   </li>
+                                 </ul>
+                             </div>
+                          </div>
+                       </div>
+                  </section>
                 </section>
 
             </section>           
