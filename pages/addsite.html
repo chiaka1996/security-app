@@ -13,80 +13,81 @@
 <script src="../tailwind.config.js"></script>
 <body>
     <main class="font-primary">
-        <aside class="bg-background_color w-[15%] h-screen px-1% py-2% text-natural fixed border border-r-[0.5px] border-l-[0] border-t-[0] border-b-[0] border-r-natural">
-           <div class="flex flex-row mb-16">
-            <div class="w-8 h-8 bg-white mr-2"></div>
-            <span class="text-lg font-medium">Company Name</span>
-            </div>
-           <div class="flex flex-row mb-8 cursor-pointer">
-            <img 
-            src="../assets/images/colored_dashboard.png" 
-            alt="dashboard"
-            class="mr-4"
-            />
-            <span class="text-primary_color text-base font-medium">Dashboard</span>
-            </div>
+      <!-- beginning of side bar -->
+      <aside class="bg-background_color w-[15%] h-screen px-1% py-2% text-natural fixed border border-r-[0.5px] border-l-[0] border-t-[0] border-b-[0] border-r-natural">
+        <div class="flex flex-row mb-16">
+         <div class="w-8 h-8 bg-white mr-2"></div>
+         <span class="text-lg font-medium">Company Name</span>
+         </div>
+        <div class="flex flex-row mb-8 cursor-pointer">
+         <img 
+         src="../assets/images/colored_dashboard.png" 
+         alt="dashboard"
+         class="mr-4"
+         />
+         <span class="text-primary_color text-base font-medium">Dashboard</span>
+         </div>
 
 
-            <div class="mb-8 cursor-pointer">
-                <div onclick="toggledropdown()" id="dropdownAnalyticsLink" class="flex flex-row relative">
-                    <img src="../assets/images/chart.png" alt="dashboard" class="mr-4"/>
-                    <span class="text-natural text-base font-medium">Analytics</span>
-                    <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
-                   </div>
-                   <div id="dropdownAnalytics" class="hidden">
-                    <ul class="">
-                      <li>
-                        <a href="#" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Analytics</a>
-                      </li>
-                      <li>
-                        <a href="#" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Anaytics</a>
-                      </li>
-                    </ul>
+         <div class="mb-8 cursor-pointer">
+             <div onclick="toggledropdown()" id="dropdownAnalyticsLink" class="flex flex-row relative">
+                 <img src="../assets/images/chart.png" alt="dashboard" class="mr-4"/>
+                 <span class="text-natural text-base font-medium">Analytics</span>
+                 <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
                 </div>
-            </div>
+                <div id="dropdownAnalytics" class="hidden">
+                 <ul class="">
+                   <li>
+                     <a href="/pages/scananalytics.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Analytics</a>
+                   </li>
+                   <li>
+                     <a href="/pages/attendanceanalytics.html" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Anaytics</a>
+                   </li>
+                 </ul>
+             </div>
+         </div>
 
-            <div class="mb-8 cursor-pointer">
-                <div onclick="toggleTransaction()" id="dropdownNavbarLink" class="flex flex-row relative">
-                    <img src="../assets/images/transaction.png" alt="dashboard" class="mr-4"/>
-                    <span class="text-natural text-base font-medium">Transactions</span>
-                    <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
-                   </div>
-                   <div id="dropdownTransaction" class="hidden">
-                    <ul class="">
-                      <li>
-                        <a href="#" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Transactions</a>
-                      </li>
-                      <li>
-                        <a href="#" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Transactions</a>
-                      </li>
-                    </ul>
+         <div class="mb-8 cursor-pointer">
+             <div onclick="toggleTransaction()" id="dropdownNavbarLink" class="flex flex-row relative">
+                 <img src="../assets/images/transaction.png" alt="dashboard" class="mr-4"/>
+                 <span class="text-natural text-base font-medium">Transactions</span>
+                 <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
                 </div>
-            </div>
-          
+                <div id="dropdownTransaction" class="hidden">
+                 <ul class="">
+                   <li>
+                     <a href="/pages/scantransaction.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Transactions</a>
+                   </li>
+                   <li>
+                     <a href="/pages/attendancetransaction.html" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Transactions</a>
+                   </li>
+                 </ul>
+             </div>
+         </div>
+       
 
-            <div class="mb-8 cursor-pointer">
-                <div onclick="toggleManagement()" id="dropdownNavbarLink" data-dropdown-toggle="dropdownAnalytics" class="flex flex-row relative">
-                    <img src="../assets/images/management.png" alt="dashboard" class="mr-4"/>
-                    <span class="text-natural text-base font-medium">management</span>
-                    <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
-                   </div>
-                   <div id="dropdownManagements" class="hidden">
-                    <ul class="">
-                      <li>
-                        <a href="#" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Users management</a>
-                      </li>
-                      <li>
-                        <a href="#" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Tags management</a>
-                      </li>
-                      <li>
-                        <a href="#" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Sites management</a>
-                      </li>
-                    </ul>
+         <div class="mb-8 cursor-pointer">
+             <div onclick="toggleManagement()" id="dropdownNavbarLink" data-dropdown-toggle="dropdownAnalytics" class="flex flex-row relative">
+                 <img src="../assets/images/management.png" alt="dashboard" class="mr-4"/>
+                 <span class="text-natural text-base font-medium">management</span>
+                 <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
                 </div>
-            </div>
-
-        </aside>
+                <div id="dropdownManagements" class="hidden">
+                 <ul class="">
+                   <li>
+                     <a href="/pages/usermanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Users management</a>
+                   </li>
+                   <li>
+                     <a href="/pages/tagsmanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Tags management</a>
+                   </li>
+                   <li>
+                     <a href="/pages/sitemanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Sites management</a>
+                   </li>
+                 </ul>
+             </div>
+         </div>
+     </aside>
+     <!-- end of side bar -->
         <section class="relative bg-db w-[85%] ml-[15%] h-screen border-natural">
             <nav class="fixed w-[85%] bg-background_color px-basic_padding py-1% text-natural flex flex-row justify-between items-center border border-r-[0] border-l-[0] border-t-[0] border-b-[0.5px] border-r-natural">
                 <div>
@@ -119,10 +120,10 @@
                             <label class="font-big text-normal text-natural">Site name</label>
                             <input 
                             type="text" 
-                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                            focus:invalid:error focus:invalid:error
                             " 
                             placeholder="" />
                         </div>
@@ -130,10 +131,10 @@
                             <label class="font-big text-normal text-natural">Email</label>
                             <input 
                             type="email" 
-                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                            focus:invalid:error focus:invalid:error
                             " 
                             placeholder="" />
                         </div>
@@ -144,8 +145,8 @@
                             <label class="font-big text-normal text-natural">Username</label>
                             <input 
                             type="text" 
-                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
                             focus:invalid:border-pink-500 focus:invalid:ring-pink-500
                             " 
@@ -155,8 +156,8 @@
                             <label class="font-big text-normal text-natural">Password</label>
                             <input 
                             type="password" 
-                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
                             focus:invalid:border-pink-500 focus:invalid:ring-pink-500
                             " 
@@ -168,8 +169,8 @@
                         <label class="font-big text-normal text-natural">Tag name</label>
                         <input 
                         type="text" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                        placeholder-color font-normal text-base 
+                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                        placeholder-color font-normal text-normal 
                         focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
                         focus:invalid:border-pink-500 focus:invalid:ring-pink-500
                         " 
@@ -180,10 +181,10 @@
                         <label class="font-big text-normal text-natural">Address</label>
                         <input 
                         type="text" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                        placeholder-color font-normal text-base 
+                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                        placeholder-color font-normal text-normal 
                         focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                        focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                        focus:invalid:error focus:invalid:error
                         " 
                         placeholder="" />
                     </div>
@@ -193,20 +194,20 @@
                             <label class="font-big text-normal text-natural">Shift start time</label>
                             <input 
                             type="time" 
-                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500" 
+                            focus:invalid:error focus:invalid:error"
                             placeholder="" />
                         </div>
                         <div class="w-[45%]">
                             <label class="font-big text-normal text-natural">Shift end time</label>
                             <input 
                             type="time" 
-                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500" 
+                            focus:invalid:error focus:invalid:error" 
                             placeholder="" />
                         </div>
                     </div>
@@ -215,10 +216,10 @@
                         <label class="font-big text-normal text-natural">Site Location</label>
                         <input 
                         type="text" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                        placeholder-color font-normal text-base 
+                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                        placeholder-color font-normal text-normal 
                         focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                        focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                        focus:invalid:error focus:invalid:error
                         " 
                         placeholder="" />
                     </div>
@@ -228,20 +229,20 @@
                             <label class="font-big text-normal text-natural">Longitude</label>
                             <input 
                             type="text" 
-                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500" 
+                            focus:invalid:error focus:invalid:error" 
                             placeholder="" />
                         </div>
                         <div class="w-[45%]">
                             <label class="font-big text-normal text-natural">Latitude</label>
                             <input 
                             type="text" 
-                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
+                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500" 
+                            focus:invalid:error focus:invalid:error" 
                             placeholder="" />
                         </div>
                     </div>
@@ -250,10 +251,10 @@
                         <label class="font-big text-normal text-natural">Photo</label>
                         <input 
                         type="file" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-white 
-                        placeholder-color font-normal text-base 
+                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                        placeholder-color font-normal text-normal 
                         focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                        focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+                        focus:invalid:error focus:invalid:error
                         " 
                         placeholder="" />
                     </div>

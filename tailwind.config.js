@@ -20,7 +20,8 @@ tailwind.config = {
             db: "#212D2B",
             logout: "#344054",
             foundation: "#0C6C17",
-            inactive: "#8C1810"
+            inactive: "#8C1810",
+            error: "#ed64a6"
           },
           padding: {
             "1%": '1%',
