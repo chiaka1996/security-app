@@ -10,6 +10,10 @@
 <style>
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
+<!-- <script src="https://cdnjs.com/libraries/Chart.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<!-- <script src="https://www.jsdelivr.com/package/npm/chart.js?path=dist"></script> -->
 <script src="../tailwind.config.js"></script>
 <body>
     <main class="font-primary">
@@ -112,9 +116,71 @@
 
             <!-- Dashboard content -->
             <section class="px-basic_padding pt-10% pb-5%">
-                content
-            </section>
-            
+               <!-- filter searches -->
+               <div class="flex flex-row justify-between items-center w-[100%]">
+                
+                <div  class="flex flex-row justify-between items-center w-[65%]">
+                <div class="relative w-[30%]">
+                    <label class="font-big text-normal text-natural">Start date</label>
+                    <div class="absolute bottom-[20%] start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-natural dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                    </svg>
+                    </div>
+                    <input 
+                    datepicker
+                    type="text" 
+                    class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                    placeholder-color font-normal text-normal 
+                    focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
+                    focus:invalid:border-error focus:invalid:ring-error" 
+                    placeholder="select date"
+                    />
+                </div>
+  
+                <div class="relative w-[30%]">
+                    <label class="font-big text-normal text-natural">End date</label>
+                    <div class="absolute bottom-[20%] start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-natural dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                    </svg>
+                    </div>
+                    <input 
+                    datepicker
+                    type="text" 
+                    class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                    placeholder-color font-normal text-normal 
+                    focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
+                    focus:invalid:border-error focus:invalid:ring-error" 
+                    placeholder="select date"
+                    />
+                </div>
+                <div class="w-[37%] relative mt-[2%]">
+                    <select class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                    placeholder-color font-normal text-normal 
+                    focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
+                    focus:invalid:border-error focus:invalid:ring-error" >
+                        <option class="bg-background_color">Daily</option>
+                        <option class="bg-background_color">Weekly</option>
+                        <option class="bg-background_color">Monthly</option>
+                        <option class="bg-background_color">Yearly</option>
+                    </select>
+                </div>
+                </div>
+
+                <div class="flex flex-row justify-between items-center w-[25%]">
+                <button class="mt-[2%] cursor-pointer w-[45%] h-[44px] outline-none bg-transparent text-natural rounded-lg font-semibold px-[16px] py-[10px] border border-primary_color">Clear</button>
+                <button class="mt-[2%] cursor-pointer w-[45%] h-[44px] outline-none bg-primary_color text-natural rounded-lg font-big px-[16px] py-[10px]">Search</button>
+                </div>
+            </div>
+            <!-- end of filter searches -->
+
+            <!-- start of bar chart -->
+            <div class="bg-background_color mt-[5%]">
+            <!-- <div class="text-natural font-normal text-normal">Daily scan % by sites</div> -->
+            <canvas id="myChart" style="width:100%; height: 50vh;"></canvas>
+            </div>
+            </section>         
         </section>
     </main>
     <script>
@@ -144,6 +210,32 @@
         const toggleProfile = () => {
             profileDropdown.classList.toggle("hidden")
         }
+
+        //bar chart
+        var xValues = ["01/03/2030", "02/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030"];
+        var yValues = [100, 200, 400, 600, 900, 950, 1200];
+        var barColors = "#3DC9B7";
+
+        new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            borderRadius: 10,
+            hoverBorderColor: '#FEFFFE',
+            data: yValues
+            }]
+        },
+        options: {
+            title: {
+            display: true,
+            text: "Daily scan % by sites",
+            fontSize: 14,
+            fontColor: "#FEFFFE",
+            }
+        }
+        });
 
     </script>
 </body>
