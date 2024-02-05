@@ -21,7 +21,10 @@ tailwind.config = {
             logout: "#344054",
             foundation: "#0C6C17",
             inactive: "#8C1810",
-            error: "#ed64a6"
+            error: "#ed64a6",
+            filter: "#010501",
+            filter_text: '#B4B5B4',
+            filterInput: "#D0D5DD"
           },
           padding: {
             "1%": '1%',
@@ -46,7 +49,8 @@ tailwind.config = {
             bigger: "30px",
             normal: "14px",
             small: "12px",
-            medium: "16px"
+            medium: "16px",
+            eighteen: "18px"
           },
           fontWeight:{
             big: "500",

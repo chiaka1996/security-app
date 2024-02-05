@@ -10,6 +10,7 @@
 <style>
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
 <script src="../tailwind.config.js"></script>
 <body>
     <main class="font-primary">
@@ -112,99 +113,125 @@
 
             <!-- Dashboard content -->
             <section class="px-basic_padding pt-10% pb-5%">
-                <div class="relative mb-5%">
-                    <div class="absolute right-0 flex flex-row items-center">
-                        <img src="../assets/images/export.png" alt="dashboard" class="mr-2 w-[16px] h-[16px]"/>
-                        <span class="text-primary_color text-normal font-big">Export report</span>
-                    </div>
-                </div>
-
-                <!-- filter searches -->
+                <!-- filter searches -->         
                 <div class="flex flex-row justify-between items-center">
-                    <div class="w-[15%]">
-                        <label class="font-big text-normal text-natural">Start date</label>
-                            <input 
-                            type="date" 
-                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
-                            focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500" 
-                            />
-                    </div>
+                    <div class="w-[75%] flex flex-row justify-between">
+                    <div class="relative w-[19%]">
+                      <label class="font-big text-normal text-natural">Start date</label>
+                      <div class="absolute bottom-[20%] start-0 flex items-center ps-3.5 pointer-events-none">
+                      <svg class="w-4 h-4 text-natural dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                      </svg>
+                      </div>
+                      <input 
+                      datepicker
+                      type="text" 
+                      class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                      placeholder-color font-normal text-normal 
+                      focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color" 
+                      placeholder="select date"
+                      />
+                  </div>
 
-                    <div class="w-[15%]">
-                        <label class="font-big text-normal text-natural">End date</label>
-                            <input 
-                            type="date" 
-                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-white 
-                            placeholder-color font-normal text-base 
-                            focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:border-pink-500 focus:invalid:ring-pink-500" 
-                            placeholder="" />
+                  <div class="relative w-[19%]">
+                    <label class="font-big text-normal text-natural">End date</label>
+                    <div class="absolute bottom-[20%] start-0 flex items-center ps-3.5 pointer-events-none">
+                    <svg class="w-4 h-4 text-natural dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                    </svg>
                     </div>
-
-                    <div class="w-[35%] relative mt-[2%]">
-                        <img src="../assets/images/search.png" alt="search" class="absolute left-[5%] bottom-[27%]"/>
-                        <input type="search" placeholder="Search" class="text-natural placeholder-natural outline-none  w-full h-11 rounded-lg bg-transparent border border-natural pl-[12%] pr-[2%]"/>
-                    </div>
-                    <button class="mt-[2%] cursor-pointer w-[12%] h-[44px] outline-none bg-transparent text-natural rounded-lg font-semibold px-[16px] py-[10px] border border-primary_color">Clear</button>
-                    <button class="mt-[2%] cursor-pointer w-[12%] h-[44px] outline-none bg-primary_color text-natural rounded-lg font-big px-[16px] py-[10px]">Search</button>
+                    <input 
+                    datepicker
+                    type="text" 
+                    class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                    placeholder-color font-normal text-normal 
+                    focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color"
+                    placeholder="select date"
+                    />
                 </div>
+
+                    <div class="w-[26%]">
+                      <label class="font-big text-normal text-natural">Select Site</label>
+                      <select class="cursor-pointer w-full border border-natural bg-db h-[44px] px-2 py-1 rounded-lg text-normal font-normal text-natural">
+                          <option class="">All site</option>
+                          <option>site type</option>
+                          <option>site type</option>
+                          <option>site type</option>
+                      </select>
+                  </div>
+                    <button class="mt-[2.5%] cursor-pointer w-[12%] h-[44px] outline-none bg-transparent text-natural text-normal rounded-lg font-semibold px-[16px] py-[10px] border border-primary_color">Clear</button>
+                    <button class="mt-[2.5%] cursor-pointer w-[12%] h-[44px] outline-none bg-primary_color text-natural text-normal rounded-lg font-big px-[16px] py-[10px]">Search</button>
+                  </div>
+
+                      <div class="flex flex-row items-center justify-end w-[15%] mt-[2.5%]">
+                          <span class="text-primary_color text-normal font-big">Export</span>
+                          <img src="../assets/images/export2.png" alt="dashboard" class="ml-2 w-[16px] h-[16px]"/>
+                      </div>
+                </div>
+                <!-- end of filter search -->
 
                 <!-- table -->
                 <section class="border border-table py-1 mt-[2%] rounded-lg">
+                  <div class="overflow-x-auto">
                     <table class="table-auto w-[100%] bg-background_color">
                         <thead>
-                          <tr class="">
-                            <th class="text-left text-small text-natural font-big  px-small py-smaller">Scan Time/Date</th>
+                          <tr class="overflow-x-auto">
+                            <th class="text-left text-small text-natural font-big  px-small py-smaller">Scan Date</th>
+                            <th class="text-left text-small text-natural font-big  px-small py-smaller">Scan Time</th>
                             <th class="text-left text-small text-natural font-big px-small py-smaller">Tags</th>
                             <th class="text-left text-small text-natural font-big px-small py-smaller">Site</th>
-                            <th class="text-left text-small text-natural font-big px-small py-smaller">Proximity</th>
-                            <th class="text-left text-small text-natural font-big  px-small py-smaller">Longitude</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Longitude</th>
                             <th class="text-left text-small text-natural font-big px-small py-smaller">Latitude</th>
                             <th class="text-left text-small text-natural font-big px-small py-smaller">Distance</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Proximity</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Gap</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr class="border border-table border-x-0 text-natural">
                             <td class="text-normal font-normal px-small">
                                 <div>3/10/2023</div>
-                                <div>5:00pm</div>
                             </td>
+                            <td class="text-normal font-normal px-small">5:00pm</td>
                             <td class="text-normal font-normal px-small">Tag name</td>
                             <td class="text-normal font-normal px-small">Site name</td>
-                            <td class="text-normal font-normal p-small">Very close</td>
+                            <td class="text-normal font-normal p-small">2</td>
+                            <td class="text-normal font-normal px-small">2</td>
                             <td class="text-normal font-normal px-small">1</td>
-                            <td class="text-normal font-normal px-small">2</td>
-                            <td class="text-normal font-normal px-small">2</td>
+                            <td class="text-normal font-normal px-small">very close</td>
+                            <td class="text-normal font-normal px-small">00h00</td>
                           </tr>
 
                           <tr class="border border-table border-x-0 text-natural">
                             <td class="text-normal font-normal px-small">
                                 <div>3/10/2023</div>
-                                <div>5:00pm</div>
                             </td>
+                            <td class="text-normal font-normal px-small">5:00pm</td>
                             <td class="text-normal font-normal px-small">Tag name</td>
                             <td class="text-normal font-normal px-small">Site name</td>
-                            <td class="text-normal font-normal p-small">Very close</td>
+                            <td class="text-normal font-normal p-small">2</td>
+                            <td class="text-normal font-normal px-small">2</td>
                             <td class="text-normal font-normal px-small">1</td>
-                            <td class="text-normal font-normal px-small">2</td>
-                            <td class="text-normal font-normal px-small">2</td>
+                            <td class="text-normal font-normal px-small">very close</td>
+                            <td class="text-normal font-normal px-small">00h00</td>
                           </tr>
+
                           <tr class="border border-table border-x-0 text-natural">
                             <td class="text-normal font-normal px-small">
                                 <div>3/10/2023</div>
-                                <div>5:00pm</div>
                             </td>
+                            <td class="text-normal font-normal px-small">5:00pm</td>
                             <td class="text-normal font-normal px-small">Tag name</td>
                             <td class="text-normal font-normal px-small">Site name</td>
-                            <td class="text-normal font-normal p-small">Very close</td>
+                            <td class="text-normal font-normal p-small">2</td>
+                            <td class="text-normal font-normal px-small">2</td>
                             <td class="text-normal font-normal px-small">1</td>
-                            <td class="text-normal font-normal px-small">2</td>
-                            <td class="text-normal font-normal px-small">2</td>
+                            <td class="text-normal font-normal px-small">very close</td>
+                            <td class="text-normal font-normal px-small">00h00</td>
                           </tr>
                         </tbody>
                       </table>
+                    </div>
                       <div class="text-basic flex flex-row justify-between p-[2%] items-center">
                         <div class="text-normal font-big">Shows<div class="inline border border-basic rounded p-1">50</div>result</div>
                         <div>

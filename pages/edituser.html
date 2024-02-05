@@ -115,13 +115,13 @@
             <section class="px-basic_padding pt-10% pb-5% bg-db">
                 <!-- <div class="font-big text-big text-natural">Add new Site</div> -->
                 <div class="font-big text-big text-natural mb-2 flex flex-row justify-between"> 
-                    <div>Add new Site</div>
-                    <button class="font-big text-normal text-primary_color rounded-lg border border-primary_color px-[16px] py-[10px] cursor-pointer bg-transparent">Manage Sites</button>
+                    <div>Edit user profile</div>
+                    <button class="font-big text-normal text-primary_color rounded-lg border border-primary_color px-[16px] py-[10px] cursor-pointer bg-transparent">Manage User</button>
                 </div>
                 <form class="mt-[2%] w-[100%]">
                     <div class="flex flex-row justify-between mb-2">
                         <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">Site name</label>
+                            <label class="font-big text-normal text-natural">First name</label>
                             <input 
                             type="text" 
                             class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
@@ -129,10 +129,10 @@
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
                             focus:invalid:error focus:invalid:error
                             " 
-                            placeholder="" />
+                            placeholder="Name" />
                         </div>
                         <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">Email</label>
+                            <label class="font-big text-normal text-natural">Last name</label>
                             <input 
                             type="email" 
                             class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
@@ -140,25 +140,22 @@
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
                             focus:invalid:error focus:invalid:error
                             " 
-                            placeholder="" />
+                            placeholder="Name" />
                         </div>
                     </div>
 
-                    <div class="w-full  mb-2">
-                        <label class="font-big text-normal text-natural">Username</label>
-                        <input 
-                        type="text" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
-                        placeholder-color font-normal text-normal 
-                        focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                        focus:invalid:error focus:invalid:error
-                        " 
-                        placeholder="" />
+                    <div class="w-full mb-3">
+                        <label class="font-big text-normal text-natural"> Site</label>
+                        <select class="outline-none w-full border border-filterInput bg-transparent h-[44px] px-2 py-1 rounded-lg text-normal font-normal text-filter_text">
+                            <option>Select Site</option>
+                            <option>Site type</option>
+                            <option>Site type</option>
+                        </select>
                     </div>
 
                     <div class="flex flex-row justify-between mb-2">
                         <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">Password</label>
+                            <label class="font-big text-normal text-natural">Phone number</label>
                             <input 
                             type="text" 
                             class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
@@ -169,7 +166,7 @@
                             placeholder="" />
                         </div>
                         <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">Confirm Password</label>
+                            <label class="font-big text-normal text-natural">Address</label>
                             <input 
                             type="password" 
                             class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
@@ -179,30 +176,6 @@
                             " 
                             placeholder="" />
                         </div>
-                    </div>
-
-                    <div class="w-full  mb-2">
-                        <label class="font-big text-normal text-natural">Address</label>
-                        <input 
-                        type="text" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
-                        placeholder-color font-normal text-normal 
-                        focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                        focus:invalid:error focus:invalid:error
-                        " 
-                        placeholder="" />
-                    </div>
-
-                    <div class="w-full  mb-2">
-                        <label class="font-big text-normal text-natural">Photo</label>
-                        <input 
-                        type="file" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
-                        placeholder-color font-normal text-normal 
-                        focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                        focus:invalid:error focus:invalid:error
-                        " 
-                        placeholder="" />
                     </div>
 
                     <div class="flex flex-row justify-between mb-2">
@@ -230,7 +203,7 @@
 
                     <div class="flex flex-row justify-between mb-2">
                         <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">Max tag</label>
+                            <label class="font-big text-normal text-natural">Normal rate per hour</label>
                             <input 
                             type="text" 
                             class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
@@ -241,9 +214,34 @@
                             placeholder="" />
                         </div>
                         <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">No of rounds</label>
+                            <label class="font-big text-normal text-natural">Sunday rate per hour</label>
                             <input 
-                            type="number" 
+                            type="text" 
+                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
+                            focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
+                            focus:invalid:error focus:invalid:error
+                            " 
+                            placeholder="" />
+                        </div>
+                    </div>
+
+                    <div class="flex flex-row justify-between mb-2">
+                        <div class="w-[48%]">
+                            <label class="font-big text-normal text-natural">Holiday rate per hour</label>
+                            <input 
+                            type="text" 
+                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
+                            placeholder-color font-normal text-normal 
+                            focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
+                            focus:invalid:error focus:invalid:error
+                            " 
+                            placeholder="" />
+                        </div>
+                        <div class="w-[48%]">
+                            <label class="font-big text-normal text-natural">Number of night shift</label>
+                            <input 
+                            type="text" 
                             class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
                             placeholder-color font-normal text-normal 
                             focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
@@ -254,42 +252,7 @@
                     </div>
 
                     <div class="w-full  mb-2">
-                        <label class="font-big text-normal text-natural">Logout Pin</label>
-                        <input 
-                        type="number" 
-                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
-                        placeholder-color font-normal text-normal 
-                        focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                        focus:invalid:error focus:invalid:error
-                        " 
-                        placeholder="" />
-                    </div>
-
-                    <div class="flex flex-row justify-between mb-2">
-                        <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">Longitude</label>
-                            <input 
-                            type="text" 
-                            class="w-full border border-natural bg-transparent h-11 px-2 py-1 rounded-lg text-natural 
-                            placeholder-color font-normal text-normal 
-                            focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:error focus:invalid:error" 
-                            placeholder="" />
-                        </div>
-                        <div class="w-[48%]">
-                            <label class="font-big text-normal text-natural">Latitude</label>
-                            <input 
-                            type="text" 
-                            class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
-                            placeholder-color font-normal text-normal 
-                            focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
-                            focus:invalid:error focus:invalid:error" 
-                            placeholder="" />
-                        </div>
-                    </div>
-
-                    <div class="w-full mb-2">
-                        <label class="font-big text-normal text-natural">Search Location</label>
+                        <label class="font-big text-normal text-natural">Night Shift allowance</label>
                         <input 
                         type="text" 
                         class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
@@ -300,8 +263,19 @@
                         placeholder="" />
                     </div>
 
+                    <div class="w-full  mb-2">
+                        <label class="font-big text-normal text-natural">Photo</label>
+                        <input 
+                        type="file" 
+                        class="w-full border border-natural bg-transparent h-[44px] px-2 py-1 rounded-lg text-natural 
+                        placeholder-color font-normal text-normal 
+                        focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
+                        focus:invalid:error focus:invalid:error
+                        " 
+                        placeholder="" />
+                    </div>
                    
-                    <button class="mt-[1%] w-[60px] h-[40px] bg-primary_color rounded-lg text-normal text-natural font-big">Add</button>
+                    <button class="mt-[1%] w-[60px] h-[40px] bg-primary_color rounded-lg text-normal text-natural font-big">update</button>
                 </form>
             </section>
             
