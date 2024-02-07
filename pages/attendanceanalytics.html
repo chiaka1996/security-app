@@ -10,84 +10,85 @@
 <style>
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
 <script src="../tailwind.config.js"></script>
 <body>
     <main class="font-primary">
         <!-- beginning of side bar -->
         <aside class="bg-background_color w-[15%] h-screen px-1% py-2% text-natural fixed border border-r-[0.5px] border-l-[0] border-t-[0] border-b-[0] border-r-natural">
-           <div class="flex flex-row mb-16">
-            <div class="w-8 h-8 bg-white mr-2"></div>
-            <span class="text-lg font-medium">Company Name</span>
-            </div>
-           <div class="flex flex-row mb-8 cursor-pointer">
-            <img 
-            src="../assets/images/colored_dashboard.png" 
-            alt="dashboard"
-            class="mr-4"
-            />
-            <span class="text-primary_color text-base font-medium">Dashboard</span>
-            </div>
+          <div class="flex flex-row mb-16">
+           <div class="w-8 h-8 bg-white mr-2"></div>
+           <span class="text-lg font-medium">Company Name</span>
+           </div>
+          <div class="flex flex-row mb-8 cursor-pointer">
+           <img 
+           src="../assets/images/colored_dashboard.png" 
+           alt="dashboard"
+           class="mr-4"
+           />
+           <span class="text-primary_color text-base font-medium">Dashboard</span>
+           </div>
 
 
-            <div class="mb-8 cursor-pointer">
-                <div onclick="toggledropdown()" id="dropdownAnalyticsLink" class="flex flex-row relative">
-                    <img src="../assets/images/chart.png" alt="dashboard" class="mr-4"/>
-                    <span class="text-natural text-base font-medium">Analytics</span>
-                    <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
-                   </div>
-                   <div id="dropdownAnalytics" class="hidden">
-                    <ul class="">
-                      <li>
-                        <a href="/pages/scananalytics.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Analytics</a>
-                      </li>
-                      <li>
-                        <a href="/pages/attendanceanalytics.html" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Anaytics</a>
-                      </li>
-                    </ul>
-                </div>
-            </div>
+           <div class="mb-8 cursor-pointer">
+               <div onclick="toggledropdown()" id="dropdownAnalyticsLink" class="flex flex-row relative">
+                   <img src="../assets/images/chart.png" alt="dashboard" class="mr-4"/>
+                   <span class="text-natural text-base font-medium">Analytics</span>
+                   <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
+                  </div>
+                  <div id="dropdownAnalytics" class="hidden">
+                   <ul class="">
+                     <li>
+                       <a href="/pages/scananalytics.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Analytics</a>
+                     </li>
+                     <li>
+                       <a href="/pages/attendanceanalytics.html" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Anaytics</a>
+                     </li>
+                   </ul>
+               </div>
+           </div>
 
-            <div class="mb-8 cursor-pointer">
-                <div onclick="toggleTransaction()" id="dropdownNavbarLink" class="flex flex-row relative">
-                    <img src="../assets/images/transaction.png" alt="dashboard" class="mr-4"/>
-                    <span class="text-natural text-base font-medium">Transactions</span>
-                    <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
-                   </div>
-                   <div id="dropdownTransaction" class="hidden">
-                    <ul class="">
-                      <li>
-                        <a href="/pages/scantransaction.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Transactions</a>
-                      </li>
-                      <li>
-                        <a href="/pages/attendancetransaction.html" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Transactions</a>
-                      </li>
-                    </ul>
-                </div>
-            </div>
-          
+           <div class="mb-8 cursor-pointer">
+               <div onclick="toggleTransaction()" id="dropdownNavbarLink" class="flex flex-row relative">
+                   <img src="../assets/images/transaction.png" alt="dashboard" class="mr-4"/>
+                   <span class="text-natural text-base font-medium">Transactions</span>
+                   <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
+                  </div>
+                  <div id="dropdownTransaction" class="hidden">
+                   <ul class="">
+                     <li>
+                       <a href="/pages/scantransaction.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Scan Transactions</a>
+                     </li>
+                     <li>
+                       <a href="/pages/attendancetransaction.html" class="block  pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Attendance Transactions</a>
+                     </li>
+                   </ul>
+               </div>
+           </div>
+         
 
-            <div class="mb-8 cursor-pointer">
-                <div onclick="toggleManagement()" id="dropdownNavbarLink" data-dropdown-toggle="dropdownAnalytics" class="flex flex-row relative">
-                    <img src="../assets/images/management.png" alt="dashboard" class="mr-4"/>
-                    <span class="text-natural text-base font-medium">management</span>
-                    <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
-                   </div>
-                   <div id="dropdownManagements" class="hidden">
-                    <ul class="">
-                      <li>
-                        <a href="/pages/usermanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Users management</a>
-                      </li>
-                      <li>
-                        <a href="/pages/tagsmanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Tags management</a>
-                      </li>
-                      <li>
-                        <a href="/pages/sitemanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Sites management</a>
-                      </li>
-                    </ul>
-                </div>
-            </div>
-        </aside>
-        <!-- end of side bar -->
+           <div class="mb-8 cursor-pointer">
+               <div onclick="toggleManagement()" id="dropdownNavbarLink" data-dropdown-toggle="dropdownAnalytics" class="flex flex-row relative">
+                   <img src="../assets/images/management.png" alt="dashboard" class="mr-4"/>
+                   <span class="text-natural text-base font-medium">management</span>
+                   <img src="../assets/images/dropdown.png" alt="dashboard" class="mr-4 w-3 h-1.5 absolute right-0 bottom-2"/>
+                  </div>
+                  <div id="dropdownManagements" class="hidden">
+                   <ul class="">
+                     <li>
+                       <a href="/pages/usermanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Users management</a>
+                     </li>
+                     <li>
+                       <a href="/pages/tagsmanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Tags management</a>
+                     </li>
+                     <li>
+                       <a href="/pages/sitemanagement.html" class="block pl-[16%] pt-2 text-natural font-headerWeight text-normal hover:text-primary_color">Sites management</a>
+                     </li>
+                   </ul>
+               </div>
+           </div>
+       </aside>
+       <!-- end of side bar -->
         <section class="relative bg-db w-[85%] ml-[15%] h-screen border-natural">
             <nav class="fixed w-[85%] bg-background_color px-basic_padding py-1% text-natural flex flex-row justify-between items-center border border-r-[0] border-l-[0] border-t-[0] border-b-[0.5px] border-r-natural">
                 <div>
@@ -104,7 +105,7 @@
                     <img src="../assets/images/chevron.png" alt="dashboard" class="w-[12px] h-[6px]"/>
                 </div>
                 <div id="profileList" class="hidden bg-white absolute bottom-[-110%]  w-[200px] right-0 rounded-lg  p-3">
-                    <ul>
+                    <ul> <section class="flex flex-row justify-between w-[100%]">
                         <li class="text-logout font-big text-normal">Logout</li>
                     </ul>
                 </div>
@@ -113,7 +114,179 @@
 
             <!-- Dashboard content -->
             <section class="px-basic_padding pt-10% pb-5%">
-                content
+                <!-- start of filter search -->
+              <div class="flex flex-row justify-between items-center">
+                <div class="w-[75%] flex flex-row justify-between">
+                <div class="relative w-[20%]">
+                  <label class="font-big text-normal text-natural">Start date</label>
+                  <div class="absolute bottom-[20%] start-0 flex items-center ps-3.5 pointer-events-none">
+                  <svg class="w-4 h-4 text-natural dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                  </svg>
+                  </div>
+                  <input 
+                  datepicker
+                  type="text" 
+                  class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                  placeholder-color font-normal text-normal 
+                  focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color" 
+                  placeholder="select date"
+                  />
+              </div>
+
+              <div class="relative w-[20%]">
+                <label class="font-big text-normal text-natural">End date</label>
+                <div class="absolute bottom-[20%] start-0 flex items-center ps-3.5 pointer-events-none">
+                <svg class="w-4 h-4 text-natural dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                </svg>
+                </div>
+                <input 
+                datepicker
+                type="text" 
+                class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                placeholder-color font-normal text-normal 
+                focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color"
+                placeholder="select date"
+                />
+            </div>
+
+                <div class="w-[25%] mt-[2.5%]">
+                  <select class="cursor-pointer w-full border border-natural bg-db h-[44px] px-2 py-1 rounded-lg text-normal 
+                  font-normal text-natural  focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
+                  focus:invalid:border-error focus:invalid:ring-error">
+                      <option  class="bg-background_color">Daily</option>
+                      <option class="bg-background_color">weekly</option>
+                      <option class="bg-background_color">Monthly</option>
+                      <option class="bg-background_color">Yearly</option>
+                  </select>
+              </div>
+
+                <button class="mt-[2.5%] cursor-pointer w-[10%] h-[44px] outline-none bg-transparent text-natural text-normal rounded-lg font-semibold px-[16px] py-[10px] border border-primary_color">Clear</button>
+                <button class="mt-[2.5%] cursor-pointer w-[10%] h-[44px] outline-none bg-primary_color text-natural text-normal rounded-lg font-big px-[16px] py-[10px]">Search</button>
+              </div>
+
+                  <div class="flex flex-row items-center justify-end w-[15%] mt-[2.5%]">
+                      <span class="text-primary_color text-normal font-big">Export</span>
+                      <img src="../assets/images/export2.png" alt="dashboard" class="ml-2 w-[16px] h-[16px]"/>
+                  </div>
+            </div>
+            <!-- end of filter search -->
+
+                <!-- table -->
+                <section class="border border-table py-1 mt-[2%] rounded-lg">
+                  <div class="overflow-x-auto">
+                    <table class="table-auto w-[100%] bg-background_color">
+                        <thead>
+                          <tr class="">
+                            <th class="text-left text-small text-natural font-big  px-small py-smaller">Check in</th>
+                            <th class="text-left text-small text-natural font-big  px-small py-smaller">Site</th>
+                            <th class="text-left text-small text-natural font-big  px-small py-smaller">Name</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Check in hours</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Shift</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Check out</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Hour Served</th>
+                            <th class="text-left text-small text-natural font-big px-small py-smaller">Check out</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="border border-table border-x-0 text-natural hover:bg-db">
+                            <td class="text-normal font-normal px-small">10|12|2024</td>
+                            <td class="text-normal font-normal px-small">
+                               Site name
+                            </td>
+                            <td class="text-normal font-normal px-small">
+                                Olatunji Azeez
+                            </td>
+                            <td class="text-normal font-normal px-small">10</td>
+                            <td class="text-normal font-normal px-small">Night Shift</td>
+                            <td class="text-normal font-normal px-small">10|12|2024</td>
+                            <td class="text-normal font-normal px-small">
+                            No data
+                            </td>
+                            <td class="text-normal font-normal p-small">Yes</td>
+                          </tr>
+
+                          <tr class="border border-table border-x-0 text-natural hover:bg-db">
+                            <td class="text-normal font-normal px-small">10|12|2024</td>
+                            <td class="text-normal font-normal px-small">
+                               Site name
+                            </td>
+                            <td class="text-normal font-normal px-small">
+                                Olatunji Azeez
+                            </td>
+                            <td class="text-normal font-normal px-small">10</td>
+                            <td class="text-normal font-normal px-small">Night Shift</td>
+                            <td class="text-normal font-normal px-small">10|12|2024</td>
+                            <td class="text-normal font-normal px-small">
+                            No data
+                            </td>
+                            <td class="text-normal font-normal p-small">Yes</td>
+                          </tr>
+
+                          <tr class="border border-table border-x-0 text-natural hover:bg-db">
+                            <td class="text-normal font-normal px-small">10|12|2024</td>
+                            <td class="text-normal font-normal px-small">
+                               Site name
+                            </td>
+                            <td class="text-normal font-normal px-small">
+                                Olatunji Azeez
+                            </td>
+                            <td class="text-normal font-normal px-small">10</td>
+                            <td class="text-normal font-normal px-small">Night Shift</td>
+                            <td class="text-normal font-normal px-small">10|12|2024</td>
+                            <td class="text-normal font-normal px-small">
+                            No data
+                            </td>
+                            <td class="text-normal font-normal p-small">Yes</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+                      <div class="text-basic flex flex-row justify-between p-[2%] items-center">
+                        <div class="text-normal font-big">Shows<div class="inline border border-basic rounded p-1">50</div>result</div>
+                        <div>
+                           <div aria-label="Page navigation example">
+                               <ul class="inline-flex -space-x-px text-normal font-big h-10 bg-db">
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight rounded-s-lg text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">
+                                       <img src="../assets/images/arrow-left.png" alt="arrow-left" class="mr-2 w-[20px] h-[20px]"/>
+                                       <span>Previous</span>
+                                   </a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">1</a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">2</a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">3</a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">...</a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">8</a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">9</a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">10</a>
+                                 </li>
+                                 <li>
+                                   <a href="#" class="flex items-center justify-center px-4 h-10 ms-0 leading-tight rounded-e-lg text-basic border border-primary_color hover:bg-primary_color hover:text-[#F9FAFB]">
+                                   <span>Next</span>
+                                   <img src="../assets/images/arrow-right.png" alt="arrow-right" class="ml-2"/>
+                                   </a>
+                                 </li>
+                               </ul>
+                           </div>
+                        </div>
+                     </div>
+                </section>
             </section>
             
         </section>

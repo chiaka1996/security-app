@@ -11,11 +11,9 @@
 </style>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
-<!-- <script src="https://cdnjs.com/libraries/Chart.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<!-- <script src="https://www.jsdelivr.com/package/npm/chart.js?path=dist"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../tailwind.config.js"></script>
-<body>
+<body class="bg-db">
     <main class="font-primary">
        <!-- beginning of side bar -->
        <aside class="bg-background_color w-[15%] h-screen px-1% py-2% text-natural fixed border border-r-[0.5px] border-l-[0] border-t-[0] border-b-[0] border-r-natural">
@@ -177,9 +175,17 @@
 
             <!-- start of bar chart -->
             <div class="bg-background_color mt-[5%]">
-            <!-- <div class="text-natural font-normal text-normal">Daily scan % by sites</div> -->
+            <div class="text-natural font-normal text-normal p-[2%]">Daily scan % by sites</div>
             <canvas id="myChart" style="width:100%; height: 50vh;"></canvas>
             </div>
+            <!-- end bar chat -->
+
+            <!-- start of multiple bar chart -->
+            <div class="bg-background_color mt-[5%]">
+                <div class="text-natural font-normal text-normal p-[2%]">Daily scan count(All sites)</div>
+                <canvas id="multipleBarChart" style="width:100%; height: 50vh;"></canvas>
+                </div>
+                <!-- end of multiple bar chat -->
             </section>         
         </section>
     </main>
@@ -212,16 +218,19 @@
         }
 
         //bar chart
-        var xValues = ["01/03/2030", "02/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030"];
-        var yValues = [100, 200, 400, 600, 900, 950, 1200];
+        var barValues = ["01/03/2030", "02/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030"];
+        var yValues = [100, 20, 120, 60, 70, 90, 120];
         var barColors = "#3DC9B7";
 
         new Chart("myChart", {
         type: "bar",
         data: {
-            labels: xValues,
+            labels: barValues,
             datasets: [{
+            label: "scan",
             backgroundColor: barColors,
+            color: "#FEFFFE",
+            barThickness: 30,
             borderRadius: 10,
             hoverBorderColor: '#FEFFFE',
             data: yValues
@@ -233,9 +242,65 @@
             text: "Daily scan % by sites",
             fontSize: 14,
             fontColor: "#FEFFFE",
+            },
+            scales:{
+                x:{
+                    ticks:{
+                        color: "#FEFFFE"
+                    }
+                },
+                y:{
+                    ticks:{
+                        color: "#FEFFFE"
+                    }
+                }
+            },
+        }
+        });
+
+        //multiple bar chart
+        let multipleValues = ["01/03/2030", "02/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030"];
+        let yValues1 = [15, 20, 45, 65, 70, 60, 120];
+        let yValues2 = [10, 25, 50, 30, 25, 95, 100];
+        let barColor2 = "#3DC9B7";
+        let barColor1 = "#E4D794"
+
+        new Chart("multipleBarChart", {
+        type: "bar",
+        data: {
+            labels: multipleValues,
+            datasets: [{
+            label: "Expected scan",
+            backgroundColor: barColor1,
+            color: "#FEFFFE",
+            barThickness: 30,
+            borderRadius: 15,
+            data: yValues1
+            },{
+            label: "Actual scan",
+            backgroundColor: barColor2,
+            color: "#FEFFFE",
+            barThickness: 30,
+            borderRadius: 15,
+            data: yValues2
+            }]
+        },
+        options: {
+            scales:{
+                x:{
+                    ticks:{
+                        color: "#FEFFFE"
+                    }
+                },
+                y:{
+                    ticks:{
+                        color: "#FEFFFE"
+                    }
+                }
             }
         }
         });
+
 
     </script>
 </body>
