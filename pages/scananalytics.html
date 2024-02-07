@@ -154,7 +154,7 @@
                     />
                 </div>
                 <div class="w-[37%] relative mt-[2%]">
-                    <select class="w-full border border-natural bg-transparent h-11 pl-[21%] py-1 rounded-lg text-natural 
+                    <select class="w-full border border-natural bg-transparent h-11 pl-[5%] py-1 rounded-lg text-natural 
                     placeholder-color font-normal text-normal 
                     focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
                     focus:invalid:border-error focus:invalid:ring-error" >
@@ -174,18 +174,89 @@
             <!-- end of filter searches -->
 
             <!-- start of bar chart -->
-            <div class="bg-background_color mt-[5%]">
+            <div class="bg-background_color mt-[5%] rounded-lg">
             <div class="text-natural font-normal text-normal p-[2%]">Daily scan % by sites</div>
             <canvas id="myChart" style="width:100%; height: 50vh;"></canvas>
             </div>
             <!-- end bar chat -->
 
             <!-- start of multiple bar chart -->
-            <div class="bg-background_color mt-[5%]">
+            <div class="bg-background_color mt-[5%] rounded-lg">
                 <div class="text-natural font-normal text-normal p-[2%]">Daily scan count(All sites)</div>
                 <canvas id="multipleBarChart" style="width:100%; height: 50vh;"></canvas>
                 </div>
                 <!-- end of multiple bar chat -->
+
+                <!-- start of line chart -->
+            <div class="bg-background_color mt-[5%] rounded-lg">
+                <div class="text-natural font-normal text-normal p-[2%]">Daily scan % For All Sites Combined</div>
+                <canvas id="lineChart" style="width:100%; height: 50vh;"></canvas>
+                </div>
+                <!-- end of line chat -->
+
+                <section class="bg-background_color p-[2%] my-[5%]">
+                    <div> 
+                        <div class="flex flex-row justify-between items-center border border-x-0 border-t-0 border-b-table p-1">
+                            <div class="text-basic text-normal font-bigger pt-1%">Site name <span class="font-normal">Headquater</span></div>
+                           <img src="../assets/images/headquarterup.png" alt="dashboard" class="cursor-pointer" id="up-one" onclick="toggleTable('one')"/>
+                           <img src="../assets/images/headquaterdown.png" alt="dashboard" class="cursor-pointer hidden" id="down-one" onclick="toggleTable('one')"/>
+                        </div>
+
+                        <div class="mt-2 w-full overflow-x-auto hidden" id="tableOne">
+                            <table class="text-small text-basic font-big w-full">
+                                <thead>
+                                <tr class="text-left border border-x-0 border-t-0 border-b-table">
+                                    <td class="py-1%">Months</td>
+                                    <td class="py-1%">Actual Scan</td>
+                                    <td class="py-1%">Expected Scan</td>
+                                </tr>
+                            </thead>
+                            <tr class="text-left border border-x-0 border-t-0 border-b-table">
+                                    <td class="py-1%">Feb 2024</td>
+                                    <td class="py-1%">0</td>
+                                    <td class="py-1%">0</td>
+                                </tr>
+                                <tr class="text-left border border-x-0 border-t-0 border-b-table">
+                                    <td class="py-1%">Feb 2024</td>
+                                    <td class="py-1%">0</td>
+                                    <td class="py-1%">0</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div> 
+                        <div class="flex flex-row justify-between items-center border border-x-0 border-t-0 border-b-table p-1">
+                            <div class="text-basic text-normal font-bigger pt-1%">Site name <span class="font-normal">Headquater</span></div>
+                           <img src="../assets/images/headquarterup.png" alt="dashboard" class="cursor-pointer" id="up-two" onclick="toggleTable('two')"/>
+                           <img src="../assets/images/headquaterdown.png" alt="dashboard" class="cursor-pointer hidden" id="down-two" onclick="toggleTable('two')"/>
+                        </div>
+
+                        <div class="mt-2 w-full overflow-x-auto hidden" id="tableTwo">
+                            <table class="text-small text-basic font-big w-full">
+                                <thead>
+                                <tr class="text-left border border-x-0 border-t-0 border-b-table">
+                                    <td class="py-1%">Months</td>
+                                    <td class="py-1%">Actual Scan</td>
+                                    <td class="py-1%">Expected Scan</td>
+                                </tr>
+                            </thead>
+                            <tr class="text-left border border-x-0 border-t-0 border-b-table">
+                                    <td class="py-1%">Feb 2024</td>
+                                    <td class="py-1%">0</td>
+                                    <td class="py-1%">0</td>
+                                </tr>
+                                <tr class="text-left border border-x-0 border-t-0 border-b-table">
+                                    <td class="py-1%">Feb 2024</td>
+                                    <td class="py-1%">0</td>
+                                    <td class="py-1%">0</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </section>
+
             </section>         
         </section>
     </main>
@@ -301,6 +372,66 @@
         }
         });
 
+        //line chart
+        var xLines = ["02/03/2030 ", "02/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030", "01/03/2030"];
+        var yLines = [100, 20, 120, 60, 70, 90, 120];
+
+        new Chart("lineChart", {
+        type: "line",
+        data: {
+            labels: xLines,
+            datasets: [{
+            label: "scan",
+            backgroundColor: ["#16C52A"], 
+            borderColor: ["#16C52A"],
+    borderWidth: 1,
+            color: "#16C52A",
+            data: yLines,
+            tension: 0.4
+            }]
+        },
+        options: {
+            scales:{
+                x:{
+                    beginAtZero: true,
+                    ticks:{
+                        color: "#FEFFFE"
+                    }
+                },
+                y:{
+                    beginAtZero: true,
+                    ticks:{
+                        color: "#FEFFFE"
+                    }
+                }
+            },
+        }
+        });
+
+        const tableOne = document.querySelector('#tableOne');
+        const tableTwo = document.querySelector('#tableTwo');
+        const upOne = document.querySelector('#up-one');
+        const downOne = document.querySelector('#down-one');
+        const upTwo = document.querySelector('#up-two');
+        const downTwo = document.querySelector('#down-two');
+
+        const toggleTable = (num) => {
+            if(num === "one"){
+                upOne.classList.toggle("hidden");
+                downOne.classList.toggle("hidden");
+                tableOne.classList.toggle("hidden");
+                // tableTwo.classList.add("hidden");
+                // upTwo.classList.add("hidden");
+
+            }
+            if(num === "two"){
+                upTwo.classList.toggle("hidden");
+                downTwo.classList.toggle("hidden");
+                tableTwo.classList.toggle("hidden");
+                // tableOne.classList.add("hidden");
+                // upOne.classList.add("hidden");
+            }
+        }
 
     </script>
 </body>
