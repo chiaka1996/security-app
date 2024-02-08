@@ -90,15 +90,14 @@
      </aside>
      <!-- end of side bar -->
         <section class="relative bg-db w-[85%] ml-[15%] h-screen border-natural">
-            <nav class="fixed w-[85%] bg-background_color px-basic_padding py-1% text-natural flex flex-row justify-between items-center border border-r-[0] border-l-[0] border-t-[0] border-b-[0.5px] border-r-natural">
-                <div>
-                    <div class="text-xl font-medium text-natural ">
-                    Welcome back, Admin name
+            <nav class="z-40 fixed w-[85%] bg-background_color px-basic_padding py-1% text-natural flex flex-row justify-between items-center border border-r-[0] border-l-[0] border-t-[0] border-b-[0.5px] border-r-natural">
+                    <div class="flex flex-row items-center justify-between w-[15%]">
+                        <img src="../assets/images/left_arrow.png" alt="dashboard" class="mr-[5%]"/>
+                    <img src="../assets/images/right_arrow.png" alt="dashboard" class="mr-5%"/>
+
+                    <h2>Scan Analytics</h2>
                     </div>
-                    <div class="text-sm font-normal text-logo">
-                        Track, manage and forecast.
-                    </div>
-                </div>
+                
                 <div class="relative">
                 <div onclick="toggleProfile()" class="flex flex-row items-center cursor-pointer">
                     <img src="../assets/images/avatar.png" alt="dashboard" class="mr-4"/>
@@ -153,7 +152,7 @@
                     placeholder="select date"
                     />
                 </div>
-                <div class="w-[37%] relative mt-[2%]">
+                <div class="w-[37%] relative mt-[3%]">
                     <select class="w-full border border-natural bg-transparent h-11 pl-[5%] py-1 rounded-lg text-natural 
                     placeholder-color font-normal text-normal 
                     focus:outline-none focus:border-primary_color focus:ring-1 focus:ring-background_color
@@ -167,8 +166,8 @@
                 </div>
 
                 <div class="flex flex-row justify-between items-center w-[25%]">
-                <button class="mt-[2%] cursor-pointer w-[45%] h-[44px] outline-none bg-transparent text-natural rounded-lg font-semibold px-[16px] py-[10px] border border-primary_color">Clear</button>
-                <button class="mt-[2%] cursor-pointer w-[45%] h-[44px] outline-none bg-primary_color text-natural rounded-lg font-big px-[16px] py-[10px]">Search</button>
+                <button class="mt-[3%] cursor-pointer w-[45%] h-[44px] outline-none bg-transparent text-natural rounded-lg font-semibold px-[16px] py-[10px] border border-primary_color">Clear</button>
+                <button class="mt-[3%] cursor-pointer w-[45%] h-[44px] outline-none bg-primary_color text-natural rounded-lg font-big px-[16px] py-[10px]">Search</button>
                 </div>
             </div>
             <!-- end of filter searches -->
